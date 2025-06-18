@@ -115,6 +115,7 @@ const PricingPackages = () => {
               <div className="mt-6">
                 <Button
                   className={`w-full bg-gradient-to-r ${pkg.gradient} hover:opacity-90 text-white border-none shadow-md transform hover:scale-[1.02] transition-all duration-300 py-6 text-lg`}
+                  onClick={() => document.getElementById('contact-form-simple')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Заказать пакет
                 </Button>

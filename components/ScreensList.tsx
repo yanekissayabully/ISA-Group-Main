@@ -262,7 +262,7 @@ const ScreensList = () => {
           <Button
             size="lg"
             className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-none shadow-lg hover:shadow-purple-500/20 transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg"
-            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('contact-form-simple')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Выбрать экран для рекламы
           </Button>

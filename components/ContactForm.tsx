@@ -12,10 +12,36 @@ const ContactFormSimple = () => {
     phone: '+7',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', phone: '+7' });
+
+    const token = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+
+    const message = `
+🚀 *Новая заявка с сайта*:
+👤 Имя: *${formData.name}*
+📞 Телефон: *${formData.phone}*
+    `;
+
+    try {
+      await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: 'Markdown',
+        }),
+      });
+
+      console.log('Сообщение отправлено в Telegram');
+      setFormData({ name: '', phone: '+7' });
+    } catch (err) {
+      console.error('Ошибка при отправке в Telegram:', err);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +71,6 @@ const ContactFormSimple = () => {
 
             <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name Input */}
                 <div>
                   <label htmlFor="name" className="block text-gray-700 mb-2 font-medium">
                     Ваше имя
@@ -62,7 +87,6 @@ const ContactFormSimple = () => {
                   />
                 </div>
 
-                {/* Phone Input */}
                 <div>
                   <label htmlFor="phone" className="block text-gray-700 mb-2 font-medium">
                     Телефон
@@ -83,7 +107,6 @@ const ContactFormSimple = () => {
                   </div>
                 </div>
 
-                {/* Submit Button */}
                 <Button
                   type="submit"
                   size="lg"
@@ -94,7 +117,6 @@ const ContactFormSimple = () => {
                 </Button>
               </form>
 
-              {/* Privacy Policy */}
               <div className="mt-6 text-center text-gray-500 text-sm">
                 Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
               </div>
@@ -104,16 +126,14 @@ const ContactFormSimple = () => {
           {/* Right Column - Image */}
           <div className="w-full md:w-1/2 hidden lg:block">
             <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-xl">
-              {/* Placeholder for your image - replace with your actual image */}
               <Image
-                src="https://i.pinimg.com/736x/b1/e1/0f/b1e10fa8f621f416250dea87b014d672.jpg" // Replace with your image path
+                src="https://i.pinimg.com/736x/b1/e1/0f/b1e10fa8f621f416250dea87b014d672.jpg"
                 alt="Контактная форма"
                 fill
                 className="object-cover"
                 quality={100}
                 priority
               />
-              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-cyan-500/10"></div>
             </div>
           </div>
