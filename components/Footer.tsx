@@ -8,22 +8,22 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Instagram,
-      href: '#',
+      href: 'https://www.instagram.com/isa_group_led?igsh=cG54cmU5NnR1Y3Ri&utm_source=qr',
       label: 'Instagram',
       gradient: 'from-pink-500 to-purple-600',
     },
     {
       icon: MessageCircle,
-      href: 'https://wa.me/77777777777',
+      href: 'https://wa.me/77081552325',
       label: 'WhatsApp',
       gradient: 'from-green-400 to-green-600',
     },
-    {
-      icon: Send,
-      href: '#',
-      label: 'Telegram',
-      gradient: 'from-blue-400 to-blue-500',
-    },
+    // {
+    //   icon: Send,
+    //   href: '#',
+    //   label: 'Telegram',
+    //   gradient: 'from-blue-400 to-blue-500',
+    // },
   ];
 
   const navigation = [
@@ -120,8 +120,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-purple-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <a href="tel:+77273002030" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
-                    +7 (727) 300-20-30
+                  <a href="tel:+77081552325" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
+                    +7 (708) 155-23-25
                   </a>
                 </div>
               </div>
@@ -129,7 +129,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-purple-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <a href="mailto:info@ledart.kz" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
-                    info@ledart.kz
+                    info@isagroup.kz
                   </a>
                 </div>
               </div>
@@ -137,7 +137,7 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-purple-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <span className="text-gray-400">
-                    г. Алматы, пр. Абая, 150
+                    г. Алматы
                   </span>
                 </div>
               </div>
@@ -147,8 +147,8 @@ const Footer = () => {
             <div className="mt-6 p-4 bg-slate-900/50 rounded-lg border border-slate-800">
               <h4 className="text-sm font-semibold text-white mb-2">Режим работы:</h4>
               <div className="text-sm text-gray-400 space-y-1">
-                <div>Пн-Пт: 09:00 - 18:00</div>
-                <div>Сб: 10:00 - 16:00</div>
+                <div>Пн-Пт: 09:00 - 20:00</div>
+                <div>Сб: 09:00 - 20:00</div>
               </div>
             </div>
           </div>

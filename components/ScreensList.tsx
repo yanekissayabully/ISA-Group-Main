@@ -14,43 +14,63 @@ const ScreensList = () => {
   const screens = [
     {
       id: 1,
-      name: 'Площадь Республики',
-      location: 'пр. Абая, 150',
+      name: 'Улица Алматинская',
+      location: 'г.Есик, ул.Алматинская',
       image: 'https://images.pexels.com/photos/3894157/pexels-photo-3894157.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      size: '6×4 м',
-      views: '500K',
-      price: 'от 300 000 ₸',
-      features: ['Центр города', 'Высокий трафик', 'Круглосуточно'],
+      size: '6×3 м',
+      views: 'Охват: по ул.Алматинская в северном направлении',
+      price: 'от 100 000 ₸',
+      features: ['10 секунд', '18кв.м площадь монитора', 'Круглосуточно'],
     },
     {
       id: 2,
-      name: 'ТРЦ Mega Alma-Ata',
-      location: 'ул. Розыбакиева, 247',
+      name: 'Улица Абая',
+      location: 'г.Есик, ул.Абая',
       image: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      size: '4×3 м',
-      views: '300K',
-      price: 'от 200 000 ₸',
-      features: ['ТРЦ', 'Семейная аудитория', 'Выходные дни'],
+      size: '6×3 м',
+      views: 'Охват: по ул.Абая',
+      price: 'от 100 000 ₸',
+      features: ['10 секунд', '18кв.м площадь монитора', 'Круглосуточно'],
     },
     {
       id: 3,
-      name: 'Аль-Фараби - Навои',
-      location: 'пр. Аль-Фараби, 77',
+      name: 'Улица Алтын Адам',
+      location: 'г.Есик, ул.Алтын Адам',
       image: 'https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      size: '8×6 м',
-      views: '800K',
-      price: 'от 500 000 ₸',
-      features: ['Премиум локация', 'Деловой центр', 'Максимальный охват'],
+      size: '6×3 м',
+      views: 'Охват: потоки по ул.Алтын Адам в восточном направлении',
+      price: 'от 100 000 ₸',
+      features: ['10 секунд', '18кв.м площадь монитора', 'Круглосуточно'],
     },
     {
       id: 4,
-      name: 'Сатпаева - Манаса',
-      location: 'ул. Сатпаева, 90',
+      name: 'Автостанция',
+      location: 'г.Каскелен, Автостанция',
       image: 'https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      size: '5×4 м',
-      views: '400K',
-      price: 'от 250 000 ₸',
-      features: ['Студенческий район', 'Молодая аудитория', 'Активная зона'],
+      size: '6×3 м',
+      views: 'Охват: потоки по ул.Аблайхана в западном направлении',
+      price: 'от 100 000 ₸',
+      features: ['10 секунд', '18кв.м площадь монитора', 'Круглосуточно'],
+    },
+    {
+      id: 5,
+      name: 'Тц.Алатау',
+      location: 'г.Каскелен, Тц.Алатау',
+      image: 'https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      size: '6×3 м',
+      views: 'Охват: потоки по ул.Аблайхана в западном направлении',
+      price: 'от 100 000 ₸',
+      features: ['10 секунд', '18кв.м площадь монитора', 'Круглосуточно'],
+    },
+    {
+      id: 6,
+      name: 'Талгар',
+      location: 'г.Талгар',
+      image: 'https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      size: '3×5 м',
+      views: 'Охват: потоки по ул.Аблайхана в западном направлении',
+      price: 'от 100 000 ₸',
+      features: ['10 секунд', '15кв.м площадь монитора', 'Круглосуточно'],
     },
   ];
 
@@ -166,7 +186,7 @@ const ScreensList = () => {
                 {/* Views */}
                 <div className="absolute bottom-6 right-6">
                   <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-purple-600 text-sm font-medium shadow-sm">
-                    {screens[activeScreen].views} просмотров/мес
+                    {screens[activeScreen].views} 
                   </div>
                 </div>
               </div>

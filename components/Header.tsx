@@ -61,13 +61,13 @@ const Header = () => {
 
         {/* Правый блок — номер и иконки */}
         <div className="hidden md:flex items-center space-x-4 text-white">
-          <a href="tel:+77777777777" className="hover:text-purple-400 text-sm">
-            +7 (777) 777-77-77
+          <a href="tel:+77081552325" className="hover:text-purple-400 text-sm">
+            +7 (708) 155-23-25
           </a>
-          <a href="https://wa.me/77777777777" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/77081552325" target="_blank" rel="noreferrer">
             <MessageCircle className="h-5 w-5 hover:text-purple-400" />
           </a>
-          <a href="https://instagram.com/yourpage" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/isa_group_led?igsh=cG54cmU5NnR1Y3Ri&utm_source=qr" target="_blank" rel="noreferrer">
             <Instagram className="h-5 w-5 hover:text-pink-400" />
           </a>
         </div>

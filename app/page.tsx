@@ -26,7 +26,7 @@ export default function Home() {
       <PricingPackages/>
       {/* <CaseStudies /> */}
       <ContactForm />
-      <YandexMap/>
+      {/* <YandexMap/> */}
       <Footer />
     </div>
   );
