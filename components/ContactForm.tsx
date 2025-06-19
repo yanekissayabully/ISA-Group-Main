@@ -13,36 +13,26 @@ const ContactFormSimple = () => {
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const token = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+  try {
+    await fetch('/api/send-to-telegram', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        phone: formData.phone,
+      }),
+    });
 
-    const message = `
-🚀 *Новая заявка с сайта*:
-👤 Имя: *${formData.name}*
-📞 Телефон: *${formData.phone}*
-    `;
-
-    try {
-      await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: message,
-          parse_mode: 'Markdown',
-        }),
-      });
-
-      console.log('Сообщение отправлено в Telegram');
-      setFormData({ name: '', phone: '+7' });
-    } catch (err) {
-      console.error('Ошибка при отправке в Telegram:', err);
-    }
-  };
+    console.log('Заявка отправлена');
+    setFormData({ name: '', phone: '+7' });
+  } catch (err) {
+    console.error('Ошибка при отправке в Telegram:', err);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
