@@ -24,7 +24,7 @@ export default function Home() {
 
       <ScreensList />
       <PricingPackages/>
-      {/* <CaseStudies /> */}
+      <CaseStudies />
       <ContactForm />
       {/* <YandexMap/> */}
       <Footer />
