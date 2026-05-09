@@ -98,11 +98,11 @@ const Header = () => {
               {item.name}
             </a>
           ))}
-          <a href="tel:+77777777777" className="block px-2">
-            +7 (777) 777-77-77
+          <a href="tel:+77081552325" className="block px-2">
+            +7 (708) 155-23-25
           </a>
           <div className="flex space-x-4 px-2">
-            <a href="https://wa.me/77777777777" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/77081552325" target="_blank" rel="noreferrer">
               <MessageCircle className="h-5 w-5 hover:text-purple-400" />
             </a>
             <a href="https://instagram.com/yourpage" target="_blank" rel="noreferrer">

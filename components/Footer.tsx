@@ -76,7 +76,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Мы создаем яркие и эффективные рекламные кампании на LED-экранах в Алматы. 
+              Мы создаем яркие и эффективные рекламные кампании на LED-экранах в Алматинской области. 
               Помогаем бизнесу привлекать больше клиентов через современные цифровые технологии.
             </p>
             <div className="flex space-x-4">
@@ -129,7 +129,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-purple-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <a href="mailto:info@ledart.kz" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
-                    info@isagroup.kz
+                    t.bolekbayev@gmail.com
                   </a>
                 </div>
               </div>
@@ -137,7 +137,7 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-purple-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <span className="text-gray-400">
-                    г. Алматы
+                    Алматинская область
                   </span>
                 </div>
               </div>

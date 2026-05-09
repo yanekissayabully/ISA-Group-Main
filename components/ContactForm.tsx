@@ -334,7 +334,7 @@ const ContactFormSimple = () => {
     setIsLoading(true);
 
     const botToken = '8138036002:AAGtX2bcrJl0F0sg-Q-M-XIvxsDBo75r998'; // ← вставь сюда токен
-    const chatId = '914762159';     // ← и сюда chat_id
+    const chatId = '402490131';     // ← и сюда chat_id
 
     const message = `
 <b>Новая заявка с сайта!</b>
